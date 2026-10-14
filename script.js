@@ -12,5 +12,8 @@ const end = event => { if (event.pointerId === activePointer) { activePointer = 
 for (const type of ['pointerup', 'pointercancel', 'lostpointercapture']) canvas.addEventListener(type, end);
 document.getElementById('increase').addEventListener('click', () => { size = Math.min(50, size + 5); sizeDisplay.textContent = size; });
 document.getElementById('decrease').addEventListener('click', () => { size = Math.max(5, size - 5); sizeDisplay.textContent = size; });
-document.getElementById('clear').addEventListener('click', () => { if (!confirm('Clear this drawing? Save a PNG first if you want to keep it.')) return; context.clearRect(0, 0, canvas.width, canvas.height); document.getElementById('status').textContent = 'Canvas cleared.'; });
+const clearDialog = document.getElementById('clear-dialog');
+document.getElementById('clear').addEventListener('click', () => clearDialog.showModal());
+document.getElementById('cancel-clear').addEventListener('click', () => clearDialog.close());
+document.getElementById('confirm-clear').addEventListener('click', () => { context.clearRect(0, 0, canvas.width, canvas.height); clearDialog.close(); document.getElementById('status').textContent = 'Canvas cleared.'; });
 document.getElementById('save').addEventListener('click', () => { const link = document.createElement('a'); link.download = 'drawing.png'; link.href = canvas.toDataURL('image/png'); link.click(); document.getElementById('status').textContent = 'PNG download requested. Keep the file to save your drawing.'; });

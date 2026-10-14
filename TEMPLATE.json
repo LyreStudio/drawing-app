@@ -40,6 +40,7 @@
     "Add dependency-free local serving with private-file denial",
     "Responsive canvas and Pointer Events support mouse, pen and touch",
     "Add PNG export, labeled controls and explicit clear confirmation",
-    "Keep drawing in memory with a truthful no-autosave notice"
+    "Keep drawing in memory with a truthful no-autosave notice",
+    "Use in-page actions inside Lyre's unchanged sandbox; no form-submission or native-modal permission required"
   ]
 }
