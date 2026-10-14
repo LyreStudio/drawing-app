@@ -1,0 +1,45 @@
+{
+  "id": "drawing-app",
+  "title": "Drawing pad",
+  "summary": "A working drawing canvas with pen size, color, clear and PNG export. Drawings stay on this device and are not autosaved.",
+  "features": [
+    "Mouse, pen and touch drawing",
+    "Choose colors and pen size",
+    "Clear the canvas or save a PNG; no account"
+  ],
+  "category": "Prototypes",
+  "upstreamRepository": "bradtraversy/50projects50days",
+  "upstreamCommit": "c92b0bc3a87fc95d44b89552b7b6a2eeb36ca481",
+  "upstreamFiles": [
+    {
+      "path": "drawing-app/index.html",
+      "bytes": 582,
+      "sha256": "3815ccde258577829f361dca8ce1c3ddc0fea85fe304dea3691f569ed7e826ce"
+    },
+    {
+      "path": "drawing-app/style.css",
+      "bytes": 783,
+      "sha256": "e39838d505d6524046e62b47cb704ab6501edf2db9d5409cc2b160d2cc8d8707"
+    },
+    {
+      "path": "drawing-app/script.js",
+      "bytes": 1690,
+      "sha256": "a7a6f78272640bd5d9f7b98e75cb0adfb3d71296e8e28a7c5807e4f6b230706c"
+    },
+    {
+      "path": "LICENSE",
+      "bytes": 1070,
+      "sha256": "b6b04184a9d43ff37c5ac2580980cc9e4f905aab1d055f963b8c749d5cb19450"
+    }
+  ],
+  "license": "MIT",
+  "reviewDate": "2026-10-14",
+  "adaptations": [
+    "Retain original MIT license and source attribution",
+    "Remove remote font imports; no external resources needed",
+    "Add dependency-free local serving with private-file denial",
+    "Responsive canvas and Pointer Events support mouse, pen and touch",
+    "Add PNG export, labeled controls and explicit clear confirmation",
+    "Keep drawing in memory with a truthful no-autosave notice"
+  ]
+}
